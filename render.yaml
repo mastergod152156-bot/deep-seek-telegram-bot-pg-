@@ -1,0 +1,14 @@
+services:
+  - type: worker
+    name: deepseek-telegram-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: 8586547665:AAGCy168pxPBcRhseoekXK4T_etV4DQPhyU
+      - key: DEEPSEEK_API_KEY
+        value: sk-51e64051d8b74472936d2c8c60ea4bec
+      - key: ADMIN_ID
+        value: 7606367267
